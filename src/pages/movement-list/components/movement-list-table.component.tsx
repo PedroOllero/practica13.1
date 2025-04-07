@@ -13,6 +13,17 @@ export const MovementListTableComponent: React.FC<Props> = (props) => {
   return (
     <>
       <div className={classes.gridContainer}>
+        <div>
+          <span>Saldos y Últimos Movimientos</span>
+          <div>
+            <span>Saldo Actual</span>
+            <span>1231</span>
+          </div>
+          <div>
+            <span>Alias: Gastos Mes</span>
+            <span>IBAN: 1231 4141 4444</span>
+          </div>
+        </div>
         <div className={classes.headerTable}>
           <span className={classes.headerCell}>FECHA</span>
           <span className={classes.headerCell}>FECHA VALOR</span>

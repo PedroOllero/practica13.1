@@ -11,11 +11,11 @@ export const MovementListItemComponent: React.FC<Props> = (props) => {
 
   return (
     <div className={classes.row}>
-      <span className={classes.headerCell}>{movementItem.transaction}</span>
-      <span className={classes.headerCell}>{movementItem.realTransaction}</span>
-      <span className={classes.headerCell}>{movementItem.description}</span>
-      <span className={classes.headerCell}>{movementItem.amount}</span>
-      <span className={classes.headerCell}>{movementItem.balance}</span>
+      <span className={classes.dataCell}>{movementItem.transaction}</span>
+      <span className={classes.dataCell}>{movementItem.realTransaction}</span>
+      <span className={classes.dataCell}>{movementItem.description}</span>
+      <span className={classes.dataCell}>{movementItem.amount}</span>
+      <span className={classes.dataCell}>{movementItem.balance}</span>
     </div>
   );
 };

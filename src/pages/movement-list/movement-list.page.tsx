@@ -1,7 +1,7 @@
 import { AppLayout } from "@/layouts";
 import React from "react";
 import { MovementsVm } from "./movement-list.vm";
-import { MovementListTableComponent } from "./components/movement-list-table.components"
+import { MovementListTableComponent } from "./components/movement-list-table.component"
 
 const movementsList: MovementsVm[] = [
   {
