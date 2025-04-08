@@ -1,6 +1,6 @@
 export interface MovementsVm {
-    transaction: string,
-    realTransaction: string,
+    transaction: Date,
+    realTransaction: Date,
     description: string,
     amount: number,
     balance: number

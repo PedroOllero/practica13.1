@@ -2,13 +2,28 @@ import React from "react";
 import { MovementsVm } from "../movement-list.vm";
 import classes from "./movement-list-table.component.module.css";
 import { MovementListItemComponent } from "./movement-list-item.component";
+import { AccountVm } from "@/pages/account-list/account-list.vm";
 
 interface Props {
   movementsList: MovementsVm[];
+  accountList: AccountVm;
 }
 
 export const MovementListTableComponent: React.FC<Props> = (props) => {
   const { movementsList } = props;
+  const { accountList } = props;
+  let accountInfo: AccountVm = {
+    id: "",
+    iban: "",
+    name: "",
+    balance: "",
+    lastTransaction: new Date(),
+  }
+
+  if(accountList){
+     accountInfo = accountList
+  }
+ 
 
   return (
     <>
@@ -17,12 +32,12 @@ export const MovementListTableComponent: React.FC<Props> = (props) => {
           <span className={classes.title}>Saldos y Últimos Movimientos</span>
           <div className={classes.balance}>
             <span className={classes.balanceText}>Saldo Actual</span>
-            <span className={classes.balanceNumber}>1231</span>
+            <span className={classes.balanceNumber}>{accountInfo.balance}</span>
           </div>
         </div>
         <div className={classes.downHeader}>
-          <span>Alias: Gastos Mes</span>
-          <span>IBAN: 1231 4141 4444</span>
+          <span>Alias: {accountInfo.name}</span>
+          <span>IBAN: {accountInfo.iban}</span>
         </div>
       </div>
 
