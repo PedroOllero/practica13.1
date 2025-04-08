@@ -1,6 +1,6 @@
 import React from "react";
 import { MovementsVm } from "../movement-list.vm";
-import classes from "./movement-list-item.component.module.css";
+import classes from "./movement-list-table.component.module.css";
 import { MovementListItemComponent } from "./movement-list-item.component";
 
 interface Props {
@@ -12,19 +12,22 @@ export const MovementListTableComponent: React.FC<Props> = (props) => {
 
   return (
     <>
-      <div className={classes.gridContainer}>
-        <div>
-          <span>Saldos y Últimos Movimientos</span>
-          <div>
-            <span>Saldo Actual</span>
-            <span>1231</span>
-          </div>
-          <div>
-            <span>Alias: Gastos Mes</span>
-            <span>IBAN: 1231 4141 4444</span>
+      <div className={classes.tableHeader}>
+        <div className={classes.upHeader}>
+          <span className={classes.title}>Saldos y Últimos Movimientos</span>
+          <div className={classes.balance}>
+            <span className={classes.balanceText}>Saldo Actual</span>
+            <span className={classes.balanceNumber}>1231</span>
           </div>
         </div>
-        <div className={classes.headerTable}>
+        <div className={classes.downHeader}>
+          <span>Alias: Gastos Mes</span>
+          <span>IBAN: 1231 4141 4444</span>
+        </div>
+      </div>
+
+      <div className={classes.gridContainer}>
+        <div className={classes.table}>
           <span className={classes.headerCell}>FECHA</span>
           <span className={classes.headerCell}>FECHA VALOR</span>
           <span className={classes.headerCell}>DESCRIPCION</span>
