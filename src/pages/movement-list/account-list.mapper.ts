@@ -10,4 +10,5 @@ export const mapMovementListFromApiToVm = (
     description: movement.description,
     amount: movement.amount,
     balance: movement.balance,
+    id: movement.id
   }));

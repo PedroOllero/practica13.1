@@ -3,5 +3,6 @@ export interface MovementsVm {
     realTransaction: Date,
     description: string,
     amount: number,
-    balance: number
+    balance: number,
+    id: string
 }

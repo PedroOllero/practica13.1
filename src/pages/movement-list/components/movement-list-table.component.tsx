@@ -52,7 +52,7 @@ export const MovementListTableComponent: React.FC<Props> = (props) => {
 
         {movementsList.map((movement) => (
           <MovementListItemComponent
-            key={movement.amount}
+            key={movement.id}
             movementItem={movement}
           />
         ))}
