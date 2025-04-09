@@ -3,8 +3,6 @@ export interface Movement {
   description: string;
   amount: number;
   balance: number;
-  type: string;
-  name: string;
   transaction: string;
   realTransaction: string;
   accountId: string;
