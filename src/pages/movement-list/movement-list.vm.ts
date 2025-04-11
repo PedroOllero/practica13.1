@@ -6,3 +6,12 @@ export interface MovementsVm {
     balance: number,
     id: string
 }
+
+export interface AccountVm {
+    id: string;
+    iban: string;
+    name: string;
+    balance: string;
+    lastTransaction: Date;
+  }
+  

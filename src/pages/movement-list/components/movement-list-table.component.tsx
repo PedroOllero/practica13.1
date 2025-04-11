@@ -6,23 +6,11 @@ import { AccountVm } from "@/pages/account-list/account-list.vm";
 
 interface Props {
   movementsList: MovementsVm[];
-  accountList: AccountVm;
+  account: AccountVm;
 }
 
 export const MovementListTableComponent: React.FC<Props> = (props) => {
-  const { movementsList } = props;
-  const { accountList } = props;
-  let accountInfo: AccountVm = {
-    id: "",
-    iban: "",
-    name: "",
-    balance: "",
-    lastTransaction: new Date(),
-  }
-
-  if(accountList){
-     accountInfo = accountList
-  }
+  const { movementsList, account} = props;
  
 
   return (
@@ -32,12 +20,12 @@ export const MovementListTableComponent: React.FC<Props> = (props) => {
           <span className={classes.title}>Saldos y Últimos Movimientos</span>
           <div className={classes.balance}>
             <span className={classes.balanceText}>Saldo Actual</span>
-            <span className={classes.balanceNumber}>{accountInfo.balance}</span>
+            <span className={classes.balanceNumber}>{account.balance}</span>
           </div>
         </div>
         <div className={classes.downHeader}>
-          <span>Alias: {accountInfo.name}</span>
-          <span>IBAN: {accountInfo.iban}</span>
+          <span>Alias: {account.name}</span>
+          <span>IBAN: {account.iban}</span>
         </div>
       </div>
 
